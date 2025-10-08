@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles and custom utilities */
+@layer base {
+  :root {
+    --primary: #0d9488;
+    --primary-hover: #0f766e;
+    --background: #f9fafb;
+    --text: #111827;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 min-h-screen;
+  }
+
+  /* Improve focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-teal-500 ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-teal-600 text-white hover:bg-teal-700
+           focus:ring-teal-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 hover:bg-gray-300
+           focus:ring-gray-500;
+  }
+
+  /* Form input styles */
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg
+           focus:border-teal-500 focus:ring-1 focus:ring-teal-500
+           transition-all duration-200;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100
+           hover:shadow-md transition-shadow duration-200;
+  }
+}
+
+@layer utilities {
+  /* Loading spinner animation */
+  .animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  /* Page transition */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .page-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
