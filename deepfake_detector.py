@@ -230,14 +230,16 @@ class DeepfakeDetector:
             logger.info(f"  - Individual scores: {[round(s, 2) for s in confidence_scores]}")
             
             # Improved decision logic with corrected confidence calculation
+            # LOW confidence = uncertain/unreliable result
+            # HIGH confidence = certain/reliable result
             if deepfake_indicators >= 3:
-                # Strong evidence of deepfake
+                # Strong evidence of deepfake - but we're uncertain about fake content
                 is_deepfake = True
-                confidence = min(85 + (deepfake_indicators * 3), 95)  # 85-95% range
+                confidence = min(30 + (deepfake_indicators * 5), 50)  # 30-50% range (low confidence for fake)
             elif deepfake_indicators == 2:
-                # Moderate evidence of deepfake
+                # Moderate evidence of deepfake - somewhat uncertain
                 is_deepfake = True
-                confidence = min(70 + (avg_confidence * 15), 90)  # 70-90% range
+                confidence = min(40 + (avg_confidence * 10), 60)  # 40-60% range (medium-low confidence for fake)
             elif deepfake_indicators == 1:
                 # Weak evidence of deepfake - but still likely authentic
                 is_deepfake = False
@@ -252,9 +254,9 @@ class DeepfakeDetector:
             
             # Create a more intuitive details message
             if is_deepfake:
-                details = f"Deepfake detected with {confidence}% confidence using {len(detection_scores)} analysis methods"
+                details = f"Deepfake detected with {confidence}% confidence using {len(detection_scores)} analysis methods (low confidence indicates uncertain result)"
             else:
-                details = f"Authentic image detected with {confidence}% confidence using {len(detection_scores)} analysis methods"
+                details = f"Authentic image detected with {confidence}% confidence using {len(detection_scores)} analysis methods (high confidence indicates reliable result)"
             
             return {
                 "is_deepfake": bool(is_deepfake),

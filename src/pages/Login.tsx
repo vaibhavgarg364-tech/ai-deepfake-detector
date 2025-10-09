@@ -46,14 +46,14 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="card max-w-md w-full space-y-8 p-6 sm:p-8">
         <div>
-          <h2 className="text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-slate-100">
             Welcome back
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-gray-600 dark:text-slate-400">
             Or{' '}
             <Link
               to="/signup"
-              className="font-medium text-teal-600 hover:text-teal-500 transition-colors"
+              className="font-medium text-teal-600 hover:text-teal-500 dark:text-teal-400 dark:hover:text-teal-300 transition-colors"
             >
               create a new account
             </Link>
@@ -62,7 +62,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
-            <div className="flex items-center p-4 text-red-800 rounded-lg bg-red-50" role="alert">
+            <div className="flex items-center p-4 text-red-800 dark:text-red-200 rounded-lg bg-red-50 dark:bg-red-900" role="alert">
               <AlertCircle className="h-5 w-5 mr-2" />
               <span>{error}</span>
             </div>
@@ -70,12 +70,12 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
           <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-slate-300">
                 Email address
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-gray-400" />
+                  <Mail className="h-5 w-5 text-gray-400 dark:text-slate-500" />
                 </div>
                 <input
                   id="email"
@@ -93,12 +93,12 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-slate-300">
                 Password
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" />
+                  <Lock className="h-5 w-5 text-gray-400 dark:text-slate-500" />
                 </div>
                 <input
                   id="password"
@@ -122,15 +122,15 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
-                className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded"
+                className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 dark:border-slate-600 dark:bg-slate-800 rounded"
               />
-              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900 dark:text-slate-300">
                 Remember me
               </label>
             </div>
 
             <div className="text-sm">
-              <a href="#" className="font-medium text-teal-600 hover:text-teal-500 transition-colors">
+              <a href="#" className="font-medium text-teal-600 hover:text-teal-500 dark:text-teal-400 dark:hover:text-teal-300 transition-colors">
                 Forgot your password?
               </a>
             </div>

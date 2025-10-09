@@ -52,14 +52,14 @@ const Signup: React.FC<SignupProps> = ({ onLogin }) => {
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="card max-w-md w-full space-y-8 p-6 sm:p-8">
         <div>
-          <h2 className="text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-slate-100">
             Create your account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-gray-600 dark:text-slate-400">
             Already have an account?{' '}
             <Link
               to="/login"
-              className="font-medium text-teal-600 hover:text-teal-500 transition-colors"
+              className="font-medium text-teal-600 hover:text-teal-500 dark:text-teal-400 dark:hover:text-teal-300 transition-colors"
             >
               Sign in
             </Link>
@@ -68,7 +68,7 @@ const Signup: React.FC<SignupProps> = ({ onLogin }) => {
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
-            <div className="flex items-center p-4 text-red-800 rounded-lg bg-red-50" role="alert">
+            <div className="flex items-center p-4 text-red-800 dark:text-red-200 rounded-lg bg-red-50 dark:bg-red-900" role="alert">
               <AlertCircle className="h-5 w-5 mr-2" />
               <span>{error}</span>
             </div>
@@ -76,12 +76,12 @@ const Signup: React.FC<SignupProps> = ({ onLogin }) => {
 
           <div className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-slate-300">
                 Full name
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-400" />
+                  <User className="h-5 w-5 text-gray-400 dark:text-slate-500" />
                 </div>
                 <input
                   id="name"
@@ -99,12 +99,12 @@ const Signup: React.FC<SignupProps> = ({ onLogin }) => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-slate-300">
                 Email address
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-gray-400" />
+                  <Mail className="h-5 w-5 text-gray-400 dark:text-slate-500" />
                 </div>
                 <input
                   id="email"
@@ -122,12 +122,12 @@ const Signup: React.FC<SignupProps> = ({ onLogin }) => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-slate-300">
                 Password
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" />
+                  <Lock className="h-5 w-5 text-gray-400 dark:text-slate-500" />
                 </div>
                 <input
                   id="password"
@@ -145,12 +145,12 @@ const Signup: React.FC<SignupProps> = ({ onLogin }) => {
             </div>
 
             <div>
-              <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700 dark:text-slate-300">
                 Confirm password
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" />
+                  <Lock className="h-5 w-5 text-gray-400 dark:text-slate-500" />
                 </div>
                 <input
                   id="confirm-password"

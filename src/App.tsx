@@ -38,7 +38,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center" role="alert" aria-label="Loading application">
+      <div className="min-h-screen bg-gray-50 dark:bg-slate-900 flex items-center justify-center" role="alert" aria-label="Loading application">
         <LoadingSpinner size="lg" />
       </div>
     );
@@ -47,7 +47,7 @@ function App() {
   return (
     <Router>
       <AccessibilityProvider>
-        <div className="min-h-screen bg-gray-50 flex flex-col">
+        <div className="min-h-screen bg-gray-50 dark:bg-slate-900 flex flex-col">
           {user && <Navbar user={user} onLogout={handleLogout} />}
           
           <main id="main-content" className="flex-1" tabIndex={-1}>

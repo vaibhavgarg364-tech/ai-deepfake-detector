@@ -9,7 +9,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200" role="navigation" aria-label="Main navigation">
+    <nav className="bg-white dark:bg-slate-800 shadow-sm border-b border-gray-200 dark:border-slate-700" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
@@ -28,31 +28,31 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Home
               </Link>
               <Link
                 to="/features"
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Features
               </Link>
               <Link
                 to="/demo"
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Demo
               </Link>
               <Link
                 to="/about"
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 About
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 Contact
               </Link>
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
 
           {/* User Menu */}
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-gray-700">
+            <span className="text-sm text-gray-700 dark:text-slate-300">
               Welcome, <span className="font-medium">{user.email}</span>
             </span>
             <button
@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-gray-700 hover:text-teal-600 focus:outline-none focus:text-teal-600"
+              className="text-gray-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 focus:outline-none focus:text-teal-600 dark:focus:text-teal-400"
               aria-label="Open mobile menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
