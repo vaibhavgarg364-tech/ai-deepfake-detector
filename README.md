@@ -98,6 +98,5 @@ npm run build
 
 ## Contact
 
-- Email: rohitrawat8954531718@gmail.com
--LinkedIN: https://www.linkedin.com/in/rohit-rawat-0677aa372?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app 
+- Email: vaibhavgarg364@gmail.com
 Available for SIH projects, college demos, and research collaborations.
