@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "start": "node server.js"
+    "start": "node server.cjs"
   },
   "dependencies": {
     "@realitydefender/realitydefender": "^0.1.15",
